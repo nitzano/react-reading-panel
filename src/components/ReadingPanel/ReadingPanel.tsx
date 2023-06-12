@@ -4,7 +4,6 @@ import { Container, PanelButton } from "./ReadingPanel.styles"
 function ReadingPanel() {
   return (
     <Container>
-      <div>
         <PanelButton>
       <MdTextIncrease></MdTextIncrease>
 
@@ -14,7 +13,6 @@ function ReadingPanel() {
 
         </PanelButton>
 
-      </div>
     </Container>
   )
 }
