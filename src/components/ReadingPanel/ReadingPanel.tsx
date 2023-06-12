@@ -5,9 +5,16 @@ import { Container, PanelButton } from "./ReadingPanel.styles";
 interface Props {
   targetClass?: string;
   targetId?: string;
+  fontSizeUnits?: string;
+  fontSizeUnitSize: number;
 }
 
-function ReadingPanel({ targetClass, targetId }: Props) {
+function ReadingPanel({
+  targetClass,
+  targetId,
+  fontSizeUnits = "px",
+  fontSizeUnitSize = 1,
+}: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
 
   useEffect(() => {
@@ -34,13 +41,12 @@ function ReadingPanel({ targetClass, targetId }: Props) {
 
   const handleFontIncrease = () => {
     if (elements?.length) {
-      console.log(`element=${JSON.stringify(elements?.length)}`);
       for (const element of elements) {
         const style = window
           .getComputedStyle(element, null)
           .getPropertyValue("font-size");
         const fontSize = parseFloat(style);
-        element.style.fontSize = fontSize + 1 + "px";
+        element.style.fontSize = fontSize + fontSizeUnitSize + fontSizeUnits;
       }
     }
   };
