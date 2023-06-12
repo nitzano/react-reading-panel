@@ -11,8 +11,6 @@ function ReadingPanel({ targetClass, targetId }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
 
   useEffect(() => {
-    // test 2
-
     if (targetClass) {
       const htmlCollection: HTMLCollectionOf<Element> =
         document.getElementsByClassName("example");
