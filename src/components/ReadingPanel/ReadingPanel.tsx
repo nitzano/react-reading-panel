@@ -6,14 +6,14 @@ interface Props {
   targetClass?: string;
   targetId?: string;
   fontSizeUnits?: string;
-  fontSizeUnitSize: number;
+  fontSizeUnitSize?: number;
 }
 
 function ReadingPanel({
   targetClass,
   targetId,
   fontSizeUnits = "px",
-  fontSizeUnitSize = 1,
+  fontSizeChange = 1,
 }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
 
@@ -46,18 +46,29 @@ function ReadingPanel({
           .getComputedStyle(element, null)
           .getPropertyValue("font-size");
         const fontSize = parseFloat(style);
-        element.style.fontSize = fontSize + fontSizeUnitSize + fontSizeUnits;
+        element.style.fontSize = `${fontSize + fontSizeChange}${fontSizeUnits}`;
       }
     }
   };
 
+  const handleFontDecrease = () => {
+    if (elements?.length) {
+      for (const element of elements) {
+        const style = window
+          .getComputedStyle(element, null)
+          .getPropertyValue("font-size");
+        const fontSize = parseFloat(style);
+        element.style.fontSize = `${fontSize - fontSizeChange}${fontSizeUnits}`;
+      }
+    }
+  };
   return (
     <Container>
       <PanelButton>
         <MdTextIncrease onClick={handleFontIncrease}></MdTextIncrease>
       </PanelButton>
       <PanelButton>
-        <MdTextDecrease></MdTextDecrease>
+        <MdTextDecrease onClick={handleFontDecrease}></MdTextDecrease>
       </PanelButton>
     </Container>
   );
