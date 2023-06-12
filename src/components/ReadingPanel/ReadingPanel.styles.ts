@@ -12,5 +12,6 @@ export const Container = styled.div`
 export const PanelButton = styled.button`
   background: white;
   color: black;
+  font-size: 1.2rem;
 
 `;
