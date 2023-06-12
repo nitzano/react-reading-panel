@@ -8,13 +8,13 @@ interface Props {
 }
 
 function ReadingPanel({targetClass, targetId}: Props) {
-  const [classElements, setClassElements] = useState<HTMLCollectionOf<Element>>()
-  const [idElement, setIdElement] = useState<Element | null>()
+  const [elements, setElements] = useState<HTMLElement[] | null>()
 
   useEffect(() => {
     if (targetClass) {
-      const allElements = document.getElementsByClassName(targetClass)
-      setClassElements(allElements)
+      const htmlCollection: HTMLCollectionOf<Element> = document.getElementsByClassName('example');
+      const htmlElements: HTMLElement[] = Array.from(htmlCollection) as HTMLElement[];
+      setElements(htmlElements)
     }
   
     
@@ -25,8 +25,12 @@ function ReadingPanel({targetClass, targetId}: Props) {
 
 
     if (targetId) {
-      const idElements = document.getElementById(targetId)
-      setIdElement(idElements)
+      const idElement = document.getElementById(targetId)
+      if (idElement) {
+        setElements([idElement])
+      } else {
+        setElements(null)
+      }
     }
   
     
