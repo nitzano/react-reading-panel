@@ -7,7 +7,7 @@ function App() {
     <>
 
       <h1>React reading panel</h1>
-      <ReadingPanel></ReadingPanel>
+      <ReadingPanel targetClass='test'></ReadingPanel>
       <div className="test">
         This is a sample test
       </div>
