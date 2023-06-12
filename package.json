@@ -62,6 +62,6 @@
     "vite-plugin-dts": "^2.3.0"
   },
   "lint-staged": {
-    "*.ts(x?)": "prettier --write"
+    "*.ts[x]": "prettier --write"
   }
 }
