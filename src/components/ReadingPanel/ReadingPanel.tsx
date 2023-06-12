@@ -6,7 +6,7 @@ interface Props {
   targetClass?: string;
   targetId?: string;
   fontSizeUnits?: string;
-  fontSizeUnitSize?: number;
+  fontSizeChange?: number;
 }
 
 function ReadingPanel({
