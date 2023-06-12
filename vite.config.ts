@@ -15,7 +15,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'src/components/index.ts'),
             name: 'ReactReadingPanel',
             formats: ['es', 'umd'],
-            fileName: (format) => `react-reading-panel.${format}.js`,
+            fileName: (format) => `index.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'styled-components'],
