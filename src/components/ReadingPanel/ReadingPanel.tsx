@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { MdTextDecrease, MdTextIncrease } from 'react-icons/md';
+import { useEffect, useState } from "react";
+import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { Container, PanelButton } from "./ReadingPanel.styles";
 
 interface Props {
@@ -7,49 +7,41 @@ interface Props {
   targetId?: string;
 }
 
-function ReadingPanel({targetClass, targetId}: Props) {
-  const [elements, setElements] = useState<HTMLElement[] | null>()
+function ReadingPanel({ targetClass, targetId }: Props) {
+  const [elements, setElements] = useState<HTMLElement[] | null>();
 
   useEffect(() => {
     if (targetClass) {
-      const htmlCollection: HTMLCollectionOf<Element> = document.getElementsByClassName('example');
-      const htmlElements: HTMLElement[] = Array.from(htmlCollection) as HTMLElement[];
-      setElements(htmlElements)
+      const htmlCollection: HTMLCollectionOf<Element> =
+        document.getElementsByClassName("example");
+      const htmlElements: HTMLElement[] = Array.from(
+        htmlCollection
+      ) as HTMLElement[];
+      setElements(htmlElements);
     }
-  
-    
-  }, [targetClass])
-  
+  }, [targetClass]);
 
   useEffect(() => {
-
-
     if (targetId) {
-      const idElement = document.getElementById(targetId)
+      const idElement = document.getElementById(targetId);
       if (idElement) {
-        setElements([idElement])
+        setElements([idElement]);
       } else {
-        setElements(null)
+        setElements(null);
       }
     }
-  
-    
-  }, [targetId])
-  
+  }, [targetId]);
 
   return (
     <Container>
-        <PanelButton>
-      <MdTextIncrease></MdTextIncrease>
-
-        </PanelButton>
-        <PanelButton>
-      <MdTextDecrease></MdTextDecrease>
-
-        </PanelButton>
-
+      <PanelButton>
+        <MdTextIncrease></MdTextIncrease>
+      </PanelButton>
+      <PanelButton>
+        <MdTextDecrease></MdTextDecrease>
+      </PanelButton>
     </Container>
-  )
+  );
 }
 
-export default ReadingPanel
+export default ReadingPanel;

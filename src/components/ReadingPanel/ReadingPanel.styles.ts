@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-   display: flex;    
-   border: 1px solid lightgray;
-   background: white;
-   padding: 5px 2px;
-   border-radius: 10px;
-    height: 40px;
-    overflow: hidden;
+  display: flex;
+  border: 1px solid lightgray;
+  background: white;
+  padding: 5px 2px;
+  border-radius: 10px;
+  height: 40px;
+  overflow: hidden;
 `;
 
 export const PanelButton = styled.button`
@@ -17,9 +17,8 @@ export const PanelButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &:not(:last-child) {
     margin-right: 10px;
   }
-
 `;
