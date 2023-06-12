@@ -13,7 +13,7 @@ function ReadingPanel({ targetClass, targetId }: Props) {
   useEffect(() => {
     if (targetClass) {
       const htmlCollection: HTMLCollectionOf<Element> =
-        document.getElementsByClassName("example");
+        document.getElementsByClassName(targetClass);
       const htmlElements: HTMLElement[] = Array.from(
         htmlCollection
       ) as HTMLElement[];
@@ -34,7 +34,14 @@ function ReadingPanel({ targetClass, targetId }: Props) {
 
   const handleFontIncrease = () => {
     if (elements?.length) {
-      console.log(`element=${JSON.stringify(elements)}`);
+      console.log(`element=${JSON.stringify(elements?.length)}`);
+      for (const element of elements) {
+        const style = window
+          .getComputedStyle(element, null)
+          .getPropertyValue("font-size");
+        const fontSize = parseFloat(style);
+        element.style.fontSize = fontSize + 1 + "px";
+      }
     }
   };
 
