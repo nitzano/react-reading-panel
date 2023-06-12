@@ -32,10 +32,16 @@ function ReadingPanel({ targetClass, targetId }: Props) {
     }
   }, [targetId]);
 
+  const handleFontIncrease = () => {
+    if (elements?.length) {
+      console.log(`element=${JSON.stringify(elements)}`);
+    }
+  };
+
   return (
     <Container>
       <PanelButton>
-        <MdTextIncrease></MdTextIncrease>
+        <MdTextIncrease onClick={handleFontIncrease}></MdTextIncrease>
       </PanelButton>
       <PanelButton>
         <MdTextDecrease></MdTextDecrease>
