@@ -64,11 +64,11 @@ function ReadingPanel({
   };
   return (
     <Container>
-      <PanelButton>
-        <MdTextIncrease onClick={handleFontIncrease}></MdTextIncrease>
+      <PanelButton onClick={handleFontIncrease}>
+        <MdTextIncrease></MdTextIncrease>
       </PanelButton>
-      <PanelButton>
-        <MdTextDecrease onClick={handleFontDecrease}></MdTextDecrease>
+      <PanelButton onClick={handleFontDecrease}>
+        <MdTextDecrease></MdTextDecrease>
       </PanelButton>
     </Container>
   );
