@@ -2,8 +2,11 @@
   "name": "react-reading-panel",
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
+    "@types/react": "^18.2.11",
     "esbuild": "^0.18.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2"
+    "lint-staged": "^13.2.2",
+    "react": "^18.2.0",
+    "typescript": "^5.1.3"
   }
 }
