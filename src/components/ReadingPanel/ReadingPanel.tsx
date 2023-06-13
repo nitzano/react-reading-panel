@@ -70,13 +70,13 @@ export function ReadingPanel({
         <MdTextDecrease></MdTextDecrease>
       </PanelButton>
       <PanelButton>
-        <VscColorMode></VscColorMode>
-      </PanelButton>
-      <PanelButton>
         <AiOutlineMenu></AiOutlineMenu>
       </PanelButton>
       <PanelButton>
         <IoMenuOutline></IoMenuOutline>
+      </PanelButton>
+      <PanelButton>
+        <VscColorMode></VscColorMode>
       </PanelButton>
     </Container>
   );
