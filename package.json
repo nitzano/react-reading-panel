@@ -11,7 +11,10 @@
     "url": "https://github.com/nitzano/react-reading-panel/issues"
   },
   "keywords": [
-    "react", "read", "reading", "accessibility "
+    "react",
+    "read",
+    "reading",
+    "accessibility "
   ],
   "files": [
     "dist",
@@ -31,6 +34,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "build:watch": "yarn build --watch",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
