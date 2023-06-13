@@ -21,6 +21,13 @@ border-radius: 50%;
   align-items: center;
 
   &:not(:last-child) {
-    margin-right: 10px;
+    :dir(ltr) {
+      margin-right: 10px;
+}
+
+:dir(rtl) {
+  margin-left: 10px;
+}
+    
   }
 `;
