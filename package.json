@@ -6,6 +6,13 @@
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitzano/react-reading-panel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nitzano/react-reading-panel/issues"
+  },
   "files": [
     "dist",
     "README.md"
