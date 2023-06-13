@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { Container, PanelButton } from "./ReadingPanel.styles";
+import { increseFont } from "./utils/increase-font.util";
 
 interface Props {
   targetClass?: string;
   targetId?: string;
-  fontSizeUnits?: string;
-  fontSizeChange?: number;
+  fontUnits?: string;
+  fontChange?: number;
 }
 
 export function ReadingPanel({
   targetClass,
   targetId,
-  fontSizeUnits = "px",
-  fontSizeChange = 1,
+  fontUnits: fontSizeUnits = "px",
+  fontChange: fontSizeChange = 1,
 }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
 
@@ -41,13 +42,7 @@ export function ReadingPanel({
 
   const handleFontIncrease = () => {
     if (elements?.length) {
-      for (const element of elements) {
-        const style = window
-          .getComputedStyle(element, null)
-          .getPropertyValue("font-size");
-        const fontSize = parseFloat(style);
-        element.style.fontSize = `${fontSize + fontSizeChange}${fontSizeUnits}`;
-      }
+      elements.forEach((el) => increseFont(el, fontSizeUnits, fontSizeChange));
     }
   };
 
