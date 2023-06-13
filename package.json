@@ -6,6 +6,13 @@
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitzano/react-reading-panel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nitzano/react-reading-panel/issues"
+  },
   "files": [
     "dist",
     "README.md"
@@ -26,7 +33,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "prettier --write src",
-    "hooks:install": "husky install"
+    "hooks:install": "husky install",
+    "release": "semantic-release"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -55,6 +63,7 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
+    "semantic-release": "^21.0.5",
     "storybook": "^7.0.20",
     "styled-components": "^6.0.0-rc.3",
     "typescript": "^5.0.2",
@@ -62,6 +71,26 @@
     "vite-plugin-dts": "^2.3.0"
   },
   "lint-staged": {
-    "*.ts[x]": ["eslint --fix", "prettier --write"]
+    "*.ts[x]": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "master",
+      "next",
+      "main",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
   }
 }
