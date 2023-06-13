@@ -2,7 +2,6 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import * as packageJson from "./package.json";
 
 export default defineConfig({
     plugins: [
@@ -30,7 +29,7 @@ export default defineConfig({
             },
         },
     },
-    optimizeDeps: {
-        exclude: Object.keys(packageJson.peerDependencies),
-      },
+    // optimizeDeps: {
+    //     exclude: Object.keys(packageJson.peerDependencies),
+    //   },
 });

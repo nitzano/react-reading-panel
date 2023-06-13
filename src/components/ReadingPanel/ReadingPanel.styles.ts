@@ -3,17 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   border: 1px solid lightgray;
+  align-items: center;
   background: white;
   padding: 5px 2px;
   border-radius: 10px;
-  height: 40px;
-  overflow: hidden;
 `;
 
-export const PanelButton = styled.button`
-  background: white;
+export const PanelButton = styled.div`
+cursor: pointer;
+height: 35px;
+width: 35px;
+border-radius: 50%;
+  background: #e2e1e1;  
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
