@@ -21,11 +21,11 @@ border-radius: 50%;
   align-items: center;
 
   &:not(:last-child) {
-    :dir(ltr) {
+    &:dir(ltr) {
       margin-right: 10px;
 }
 
-:dir(rtl) {
+&:dir(rtl) {
   margin-left: 10px;
 }
     
