@@ -1,1 +1,2 @@
-export { default as Button } from "./ReadingPanel/ReadingPanel";
+export * from "./ReadingPanel/ReadingPanel";
+
