@@ -9,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/nitzano/react-reading-panel/issues"
   },
+  "keywords": [
+    "react", "read", "reading", "accessibility "
+  ],
   "files": [
     "dist",
     "README.md"
