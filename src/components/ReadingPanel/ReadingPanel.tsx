@@ -1,32 +1,17 @@
 import { useEffect, useState } from "react";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { Container, PanelButton } from "./ReadingPanel.styles";
+import { Theme } from "./theme/theme.types";
 import { decreaseFont } from "./utils/decrease-font.util";
 import { increseFont } from "./utils/increase-font.util";
-
-interface Colors {
-  bgLightColor: string;
-  fgLightColor: string;
-  bgDarkColor: string;
-  fgDarkColor: string;
-  defaultTheme: "light" | "dark";
-}
 
 interface Props {
   targetClass?: string;
   targetId?: string;
   fontUnits?: string;
   fontChange?: number;
-  colors?: Colors;
+  theme?: Theme;
 }
-
-const defaultColors: Colors = {
-  defaultTheme: "light",
-  bgLightColor: "#ffffff",
-  fgLightColor: "#000000",
-  fgDarkColor: "#ffffff",
-  bgDarkColor: "#000000",
-};
 
 export function ReadingPanel({
   targetClass,
