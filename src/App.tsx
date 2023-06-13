@@ -1,5 +1,5 @@
 import "./App.css";
-import ReadingPanel from "./components/ReadingPanel/ReadingPanel";
+import { ReadingPanel } from "./components";
 
 function App() {
   return (
