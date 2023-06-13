@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { IoMenuOutline } from "react-icons/io5";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
 import { Theme } from "./theme/theme.types";
 import { decreaseFont } from "./utils/decrease-font.util";
 import { increseFont } from "./utils/increase-font.util";
+
 interface Props {
   targetClass?: string;
   targetId?: string;
@@ -68,6 +71,12 @@ export function ReadingPanel({
       </PanelButton>
       <PanelButton>
         <VscColorMode></VscColorMode>
+      </PanelButton>
+      <PanelButton>
+        <AiOutlineMenu></AiOutlineMenu>
+      </PanelButton>
+      <PanelButton>
+        <IoMenuOutline></IoMenuOutline>
       </PanelButton>
     </Container>
   );
