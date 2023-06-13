@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 5px 2px;
-  border-radius: 10px;
-`;
 
 export const PanelButton = styled.div`
 cursor: pointer;
@@ -19,15 +12,14 @@ border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+`;
 
-  &:not(:last-child) {
-    &:dir(ltr) {
-      margin-right: 10px;
-}
 
-&:dir(rtl) {
-  margin-left: 10px;
-}
-    
-  }
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px 2px;
+  border-radius: 10px;
+  gap: 10px;
 `;
