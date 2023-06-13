@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import * as packageJson from "./package.json";
 
 export default defineConfig({
     plugins: [
@@ -17,6 +18,7 @@ export default defineConfig({
             formats: ['es', 'umd', 'cjs'],
             fileName: (format) => `index.${format}.js`,
         },
+
         rollupOptions: {
             external: ['react', 'react-dom', 'styled-components'],
             output: {
@@ -28,4 +30,10 @@ export default defineConfig({
             },
         },
     },
+    optimizeDeps: {
+        exclude: Object.keys(packageJson.peerDependencies),
+      },
+      esbuild: {
+        minify: true,
+      },
 });
