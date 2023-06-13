@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
+import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
 import { Theme } from "./theme/theme.types";
 import { decreaseFont } from "./utils/decrease-font.util";
 import { increseFont } from "./utils/increase-font.util";
-
 interface Props {
   targetClass?: string;
   targetId?: string;
@@ -65,6 +65,9 @@ export function ReadingPanel({
       </PanelButton>
       <PanelButton onClick={handleFontDecrease}>
         <MdTextDecrease></MdTextDecrease>
+      </PanelButton>
+      <PanelButton>
+        <VscColorMode></VscColorMode>
       </PanelButton>
     </Container>
   );
