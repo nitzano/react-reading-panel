@@ -9,12 +9,12 @@ interface Props {
   fontSizeChange?: number;
 }
 
-export const ReadingPanel = ({
+export function ReadingPanel({
   targetClass,
   targetId,
   fontSizeUnits = "px",
   fontSizeChange = 1,
-}: Props) => {
+}: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
 
   useEffect(() => {
@@ -72,4 +72,4 @@ export const ReadingPanel = ({
       </PanelButton>
     </Container>
   );
-};
+}
