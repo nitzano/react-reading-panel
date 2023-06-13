@@ -4,12 +4,29 @@ import { Container, PanelButton } from "./ReadingPanel.styles";
 import { decreaseFont } from "./utils/decrease-font.util";
 import { increseFont } from "./utils/increase-font.util";
 
+interface Colors {
+  bgLightColor: string;
+  fgLightColor: string;
+  bgDarkColor: string;
+  fgDarkColor: string;
+  defaultTheme: "light" | "dark";
+}
+
 interface Props {
   targetClass?: string;
   targetId?: string;
   fontUnits?: string;
   fontChange?: number;
+  colors?: Colors;
 }
+
+const defaultColors: Colors = {
+  defaultTheme: "light",
+  bgLightColor: "#ffffff",
+  fgLightColor: "#000000",
+  fgDarkColor: "#ffffff",
+  bgDarkColor: "#000000",
+};
 
 export function ReadingPanel({
   targetClass,
