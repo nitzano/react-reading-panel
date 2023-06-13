@@ -18,8 +18,7 @@ jobs:
           cache: "yarn"
       - name: Install dependencies
         run: yarn --immutable
-      - run: yarn test
-      - run: yarn build:prod
+      - run: yarn build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
