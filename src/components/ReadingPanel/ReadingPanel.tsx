@@ -4,9 +4,11 @@ import { IoMenuOutline } from "react-icons/io5";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
-import { Theme } from "./theme/theme.types";
 import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
+import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
+import { increaseLineHeight } from "./line-height/increase-line-height.util";
+import { Theme } from "./theme/theme.types";
 
 interface Props {
   targetClass?: string;
@@ -54,13 +56,26 @@ export function ReadingPanel({
 
   const handleFontDecrease = () => {
     if (elements?.length) {
-      if (elements?.length) {
-        elements.forEach((el) =>
-          decreaseFont(el, fontSizeUnits, fontSizeChange)
-        );
-      }
+      elements.forEach((el) => decreaseFont(el, fontSizeUnits, fontSizeChange));
     }
   };
+
+  const handleLineHeightIncrease = () => {
+    if (elements?.length) {
+      elements.forEach((el) =>
+        increaseLineHeight(el, fontSizeUnits, fontSizeChange)
+      );
+    }
+  };
+
+  const handleLineHeightDecrease = () => {
+    if (elements?.length) {
+      elements.forEach((el) =>
+        decreaseLineHeight(el, fontSizeUnits, fontSizeChange)
+      );
+    }
+  };
+
   return (
     <Container>
       <PanelButton onClick={handleFontIncrease}>
@@ -69,10 +84,10 @@ export function ReadingPanel({
       <PanelButton onClick={handleFontDecrease}>
         <MdTextDecrease></MdTextDecrease>
       </PanelButton>
-      <PanelButton>
+      <PanelButton onClick={handleLineHeightIncrease}>
         <AiOutlineMenu></AiOutlineMenu>
       </PanelButton>
-      <PanelButton>
+      <PanelButton onClick={handleLineHeightDecrease}>
         <IoMenuOutline></IoMenuOutline>
       </PanelButton>
       <PanelButton>

@@ -16,7 +16,11 @@ export const Primary: Story = {
   render: () => (
     <>
       <ReadingPanel targetId="sample"></ReadingPanel>
-      <div id="sample">Sample Text</div>
+      <div>
+        <p id="sample">
+          Line number 1 and <br></br> line number two
+        </p>
+      </div>
     </>
   ),
 };
