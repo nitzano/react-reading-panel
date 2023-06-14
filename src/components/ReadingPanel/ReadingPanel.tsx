@@ -10,6 +10,8 @@ import { Container, PanelButton } from "./ReadingPanel.styles";
 import { changeColorTheme } from "./colors/change-color-theme.util";
 import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
+import { decreaseLetterSpacing } from "./letter-spacing/decrease-letter-spacing.util";
+import { increaseLetterSpacing } from "./letter-spacing/increase-letter-spacing.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
 import { increaseLineHeight } from "./line-height/increase-line-height.util";
 import { Settings, defaultSettings } from "./settings/settings.types";
@@ -71,13 +73,45 @@ export function ReadingPanel({
 
   const handleLineHeightIncrease = () => {
     elements?.forEach((el) =>
-      increaseLineHeight(el, settings.lineHeightUnits, settings.lineHeightsStep)
+      increaseLineHeight(
+        el,
+        settings.lineHeightUnits,
+        settings.lineHeightsStep,
+        settings.lineHeightDefaultSize
+      )
     );
   };
 
   const handleLineHeightDecrease = () => {
     elements?.forEach((el) =>
-      decreaseLineHeight(el, settings.lineHeightUnits, settings.lineHeightsStep)
+      decreaseLineHeight(
+        el,
+        settings.lineHeightUnits,
+        settings.lineHeightsStep,
+        settings.lineHeightDefaultSize
+      )
+    );
+  };
+
+  const handleLetterSpacingIncrease = () => {
+    elements?.forEach((el) =>
+      increaseLetterSpacing(
+        el,
+        settings.letterSpacingUnit,
+        settings.letterSpacingStep,
+        settings.letterSpacingDefaultSize
+      )
+    );
+  };
+
+  const handleLetterSpacingDecrease = () => {
+    elements?.forEach((el) =>
+      decreaseLetterSpacing(
+        el,
+        settings.letterSpacingUnit,
+        settings.letterSpacingStep,
+        settings.letterSpacingDefaultSize
+      )
     );
   };
 
@@ -110,9 +144,9 @@ export function ReadingPanel({
         <VscColorMode></VscColorMode>
       </PanelButton>
       <PanelButton>
-        <FaExpandAlt></FaExpandAlt>
+        <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
       </PanelButton>
-      <PanelButton>
+      <PanelButton onClick={handleLetterSpacingDecrease}>
         <ImShrink2></ImShrink2>
       </PanelButton>
     </Container>

@@ -20,7 +20,7 @@ export interface Settings {
   colorSettings: ColorSettings;
   fontSizeStep: number;
   fontSizeUnits: string;
-  letterSpacingChange: number;
+  letterSpacingStep: number;
   letterSpacingDefaultSize: string;
   letterSpacingUnit: string;
   lineHeightDefaultSize: string;
@@ -34,10 +34,10 @@ export const defaultSettings: Settings = {
   colorSettings: defaultColorSettings,
   fontSizeStep: 1,
   fontSizeUnits: 'px',
-  letterSpacingChange: 1,
-  letterSpacingDefaultSize: '1em',
+  letterSpacingStep: 1,
+  letterSpacingDefaultSize: '1px',
   letterSpacingUnit: 'px',
-  lineHeightDefaultSize: '1em',
+  lineHeightDefaultSize: '1rem',
   lineHeightsStep: 1,
   lineHeightUnits: 'px'
 }
