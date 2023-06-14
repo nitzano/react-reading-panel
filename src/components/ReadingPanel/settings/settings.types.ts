@@ -3,11 +3,10 @@ export interface ColorSettings {
     fgLightColor: string;
     bgDarkColor: string;
     fgDarkColor: string;
-    defaultTheme: "light" | "dark";
   }
   
   export const defaultColorSettings: ColorSettings = {
-    defaultTheme: "light",
+    
     bgLightColor: "#ffffff",
     fgLightColor: "#000000",
     fgDarkColor: "#ffffff",
@@ -25,9 +24,11 @@ export interface Settings {
   lineHeightDefaultSize: string;
   lineHeightsStep: number
   lineHeightUnits: string;
+  defaultColorMode: 'light' | 'dark';
 }  
 
 export const defaultSettings: Settings = {
+  defaultColorMode: 'light',
   colorSettings: defaultColorSettings,
   fontSizeStep: 1,
   fontSizeUnits: 'px',
