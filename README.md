@@ -5,18 +5,20 @@ Add accessibility reading panel to any website!
 <br/><br/>
 <a target="_blank" href="https://github.com/nitzano/react-reading-panel">Source Code</a> |
 <a target="_blank" href="https://react-reading-panel-demo.vercel.app">Live Demo</a>
-
 </div>
 
 
+<br/>
+<div align="center">
 
-\
 [![npm](https://img.shields.io/npm/v/react-reading-panel)](https://www.npmjs.com/package/react-reading-panel)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/react-reading-panel?style=flat)](https://github.com/nitzano/react-reading-panel/stargazers)
 ![npm](https://img.shields.io/npm/dw/react-reading-panel)
+
+</div>
 
 # Main Features
 
