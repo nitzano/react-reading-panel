@@ -32,20 +32,20 @@ Add accessibility reading panel to any website!
 ## Target by Id
 
 ```jsx
-      <ReadingPanel targetId="sample"></ReadingPanel>
-        <p id="sample">
-            Text to be changes
-        </p>
+<ReadingPanel targetId="sample"></ReadingPanel>
+<p id="sample">
+    Text to be changes
+</p>
 ```
 
 
 ## Target by class
 
 ```jsx
-      <ReadingPanel targetClass="sample"></ReadingPanel>
-        <p className="sample">
-            Text to be changes
-        </p>
+<ReadingPanel targetClass="sample"></ReadingPanel>
+<p className="sample">
+    Text to be changes
+</p>
 ```
 
 
