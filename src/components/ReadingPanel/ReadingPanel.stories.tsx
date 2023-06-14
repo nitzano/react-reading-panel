@@ -17,8 +17,18 @@ export const Primary: Story = {
     <>
       <ReadingPanel targetId="sample"></ReadingPanel>
       <div>
-        <p id="sample">
-          Line number 1 and <br></br> line number two
+        <p id="sample" style={{ userSelect: "none", maxWidth: "400px" }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames. Ultrices neque ornare aenean euismod elementum nisi quis.
+          Euismod elementum nisi quis eleifend quam adipiscing. Est ante in nibh
+          mauris cursus. Morbi tristique senectus et netus et malesuada fames ac
+          turpis. Vitae purus faucibus ornare suspendisse. In nisl nisi
+          scelerisque eu ultrices vitae auctor eu. Purus viverra accumsan in
+          nisl nisi scelerisque eu ultrices vitae. Ultrices gravida dictum fusce
+          ut. At quis risus sed vulputate odio. Nisl tincidunt eget nullam non.
+          Malesuada fames ac turpis egestas sed tempus.
         </p>
       </div>
     </>

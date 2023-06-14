@@ -1,30 +1,34 @@
+import { merge } from "lodash";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { FaExpandAlt } from "react-icons/fa";
+import { ImShrink2 } from "react-icons/im";
 import { IoMenuOutline } from "react-icons/io5";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
+import { changeColorTheme } from "./colors/change-color-theme.util";
 import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
+import { decreaseLetterSpacing } from "./letter-spacing/decrease-letter-spacing.util";
+import { increaseLetterSpacing } from "./letter-spacing/increase-letter-spacing.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
 import { increaseLineHeight } from "./line-height/increase-line-height.util";
-import { Theme } from "./theme/theme.types";
+import { Settings, defaultSettings } from "./settings/settings.types";
 
 interface Props {
   targetClass?: string;
   targetId?: string;
-  fontUnits?: string;
-  fontChange?: number;
-  theme?: Theme;
+  settings?: Partial<Settings>;
 }
 
 export function ReadingPanel({
   targetClass,
   targetId,
-  fontUnits: fontSizeUnits = "px",
-  fontChange: fontSizeChange = 1,
+  settings: userSettings,
 }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
+  const [settings, setSettings] = useState<Settings>(defaultSettings);
 
   useEffect(() => {
     if (targetClass) {
@@ -38,6 +42,13 @@ export function ReadingPanel({
   }, [targetClass]);
 
   useEffect(() => {
+    if (userSettings) {
+      const newSettings = merge(settings, userSettings);
+      setSettings(newSettings);
+    }
+  }, [userSettings]);
+
+  useEffect(() => {
     if (targetId) {
       const idElement = document.getElementById(targetId);
       if (idElement) {
@@ -49,31 +60,70 @@ export function ReadingPanel({
   }, [targetId]);
 
   const handleFontIncrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) => increseFont(el, fontSizeUnits, fontSizeChange));
-    }
+    elements?.forEach((el) =>
+      increseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+    );
   };
 
   const handleFontDecrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) => decreaseFont(el, fontSizeUnits, fontSizeChange));
-    }
+    elements?.forEach((el) =>
+      decreaseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+    );
   };
 
   const handleLineHeightIncrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) =>
-        increaseLineHeight(el, fontSizeUnits, fontSizeChange)
-      );
-    }
+    elements?.forEach((el) =>
+      increaseLineHeight(
+        el,
+        settings.lineHeightUnits,
+        settings.lineHeightsStep,
+        settings.lineHeightDefaultSize
+      )
+    );
   };
 
   const handleLineHeightDecrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) =>
-        decreaseLineHeight(el, fontSizeUnits, fontSizeChange)
-      );
-    }
+    elements?.forEach((el) =>
+      decreaseLineHeight(
+        el,
+        settings.lineHeightUnits,
+        settings.lineHeightsStep,
+        settings.lineHeightDefaultSize
+      )
+    );
+  };
+
+  const handleLetterSpacingIncrease = () => {
+    elements?.forEach((el) =>
+      increaseLetterSpacing(
+        el,
+        settings.letterSpacingUnit,
+        settings.letterSpacingStep,
+        settings.letterSpacingDefaultSize
+      )
+    );
+  };
+
+  const handleLetterSpacingDecrease = () => {
+    elements?.forEach((el) =>
+      decreaseLetterSpacing(
+        el,
+        settings.letterSpacingUnit,
+        settings.letterSpacingStep,
+        settings.letterSpacingDefaultSize
+      )
+    );
+  };
+
+  const handleColorChange = () => {
+    elements?.forEach((el) => {
+      changeColorTheme(el, settings.defaultTheme, settings.colorSettings);
+    });
+
+    setSettings((currentSettings) => ({
+      ...currentSettings,
+      defaultTheme: currentSettings.defaultTheme === "light" ? "dark" : "light",
+    }));
   };
 
   return (
@@ -90,8 +140,14 @@ export function ReadingPanel({
       <PanelButton onClick={handleLineHeightDecrease}>
         <IoMenuOutline></IoMenuOutline>
       </PanelButton>
-      <PanelButton>
+      <PanelButton onClick={handleColorChange}>
         <VscColorMode></VscColorMode>
+      </PanelButton>
+      <PanelButton>
+        <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
+      </PanelButton>
+      <PanelButton onClick={handleLetterSpacingDecrease}>
+        <ImShrink2></ImShrink2>
       </PanelButton>
     </Container>
   );

@@ -1,1 +1,0 @@
-export const defaultLineHeight = '1em'
