@@ -27,6 +27,8 @@ export interface Settings {
   lineHeightDefaultSize: string;
   lineHeightsStep: number
   lineHeightUnits: string;
+  startOpen: boolean;
+  direction: 'horizontal' | 'vertical';
 }  
 
 export const defaultSettings: Settings = {
@@ -39,5 +41,7 @@ export const defaultSettings: Settings = {
   letterSpacingUnit: 'px',
   lineHeightDefaultSize: '1rem',
   lineHeightsStep: 1,
-  lineHeightUnits: 'px'
+  lineHeightUnits: 'px',
+  startOpen: false,
+  direction: 'horizontal'
 }
