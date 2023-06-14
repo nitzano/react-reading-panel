@@ -13,6 +13,8 @@ export interface ColorSettings {
     bgDarkColor: "#000000",
   };
 
+  export type Theme = 'light' | 'dark';
+
 
 export interface Settings {
   colorSettings: ColorSettings;
@@ -24,11 +26,11 @@ export interface Settings {
   lineHeightDefaultSize: string;
   lineHeightsStep: number
   lineHeightUnits: string;
-  defaultColorMode: 'light' | 'dark';
+  defaultTheme: Theme;
 }  
 
 export const defaultSettings: Settings = {
-  defaultColorMode: 'light',
+  defaultTheme: 'light',
   colorSettings: defaultColorSettings,
   fontSizeStep: 1,
   fontSizeUnits: 'px',
