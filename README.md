@@ -1,5 +1,6 @@
 # react-reading-panel 📖
 
+Accessib
 
 <div align="center">
 
@@ -11,6 +12,8 @@
 ![npm](https://img.shields.io/npm/dw/react-reading-panel)
 
 
-Coming soon!
 
-A reading panel component to any element in the screen
+
+# Usage
+
+# Settings
