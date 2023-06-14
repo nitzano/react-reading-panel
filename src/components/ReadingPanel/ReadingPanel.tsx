@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { FaExpandAlt } from "react-icons/fa";
+import { ImShrink2 } from "react-icons/im";
 import { IoMenuOutline } from "react-icons/io5";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { VscColorMode } from "react-icons/vsc";
@@ -84,6 +86,12 @@ export function ReadingPanel({
       </PanelButton>
       <PanelButton>
         <VscColorMode></VscColorMode>
+      </PanelButton>
+      <PanelButton>
+        <FaExpandAlt></FaExpandAlt>
+      </PanelButton>
+      <PanelButton>
+        <ImShrink2></ImShrink2>
       </PanelButton>
     </Container>
   );
