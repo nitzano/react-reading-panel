@@ -150,30 +150,32 @@ export function ReadingPanel({
         )}
       </>
 
-      <>
-        <PanelButton onClick={handleFontIncrease}>
-          <MdTextIncrease></MdTextIncrease>
-        </PanelButton>
+      {isOpen && (
+        <>
+          <PanelButton onClick={handleFontIncrease}>
+            <MdTextIncrease></MdTextIncrease>
+          </PanelButton>
 
-        <PanelButton onClick={handleFontDecrease}>
-          <MdTextDecrease></MdTextDecrease>
-        </PanelButton>
-        <PanelButton onClick={handleLineHeightIncrease}>
-          <AiOutlineMenu></AiOutlineMenu>
-        </PanelButton>
-        <PanelButton onClick={handleLineHeightDecrease}>
-          <IoMenuOutline></IoMenuOutline>
-        </PanelButton>
-        <PanelButton onClick={handleColorChange}>
-          <VscColorMode></VscColorMode>
-        </PanelButton>
-        <PanelButton>
-          <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
-        </PanelButton>
-        <PanelButton onClick={handleLetterSpacingDecrease}>
-          <ImShrink2></ImShrink2>
-        </PanelButton>
-      </>
+          <PanelButton onClick={handleFontDecrease}>
+            <MdTextDecrease></MdTextDecrease>
+          </PanelButton>
+          <PanelButton onClick={handleLineHeightIncrease}>
+            <AiOutlineMenu></AiOutlineMenu>
+          </PanelButton>
+          <PanelButton onClick={handleLineHeightDecrease}>
+            <IoMenuOutline></IoMenuOutline>
+          </PanelButton>
+          <PanelButton onClick={handleColorChange}>
+            <VscColorMode></VscColorMode>
+          </PanelButton>
+          <PanelButton>
+            <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
+          </PanelButton>
+          <PanelButton onClick={handleLetterSpacingDecrease}>
+            <ImShrink2></ImShrink2>
+          </PanelButton>
+        </>
+      )}
     </Container>
   );
 }
