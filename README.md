@@ -27,7 +27,7 @@ Add accessibility reading panel to any website!
 3. Change letter spacing
 4. Switch between light/dark colors
  
- More features to come soon!
+ More features are coming soon!
 
 # Usage
 
