@@ -1,3 +1,4 @@
+import { merge } from "lodash";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaExpandAlt } from "react-icons/fa";
@@ -10,23 +11,21 @@ import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
 import { increaseLineHeight } from "./line-height/increase-line-height.util";
-import { Settings } from "./settings/settings.types";
+import { Settings, defaultSettings } from "./settings/settings.types";
 
 interface Props {
   targetClass?: string;
   targetId?: string;
-  fontUnits?: string;
-  fontChange?: number;
-  settings?: Settings;
+  settings?: Partial<Settings>;
 }
 
 export function ReadingPanel({
   targetClass,
   targetId,
-  fontUnits: fontSizeUnits = "px",
-  fontChange: fontSizeChange = 1,
+  settings: userSettings,
 }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
+  const [settings, setSettings] = useState<Settings>(defaultSettings);
 
   useEffect(() => {
     if (targetClass) {
@@ -40,6 +39,13 @@ export function ReadingPanel({
   }, [targetClass]);
 
   useEffect(() => {
+    if (userSettings) {
+      const newSettings = merge(settings, userSettings);
+      setSettings(newSettings);
+    }
+  }, [userSettings]);
+
+  useEffect(() => {
     if (targetId) {
       const idElement = document.getElementById(targetId);
       if (idElement) {
@@ -51,22 +57,26 @@ export function ReadingPanel({
   }, [targetId]);
 
   const handleFontIncrease = () => {
-    elements?.forEach((el) => increseFont(el, fontSizeUnits, fontSizeChange));
+    elements?.forEach((el) =>
+      increseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+    );
   };
 
   const handleFontDecrease = () => {
-    elements?.forEach((el) => decreaseFont(el, fontSizeUnits, fontSizeChange));
+    elements?.forEach((el) =>
+      decreaseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+    );
   };
 
   const handleLineHeightIncrease = () => {
     elements?.forEach((el) =>
-      increaseLineHeight(el, fontSizeUnits, fontSizeChange)
+      increaseLineHeight(el, settings.lineHeightUnits, settings.lineHeightsStep)
     );
   };
 
   const handleLineHeightDecrease = () => {
     elements?.forEach((el) =>
-      decreaseLineHeight(el, fontSizeUnits, fontSizeChange)
+      decreaseLineHeight(el, settings.lineHeightUnits, settings.lineHeightsStep)
     );
   };
 
