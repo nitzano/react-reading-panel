@@ -60,3 +60,9 @@ Add accessibility reading panel to any website!
 
 ## Color Setting
 
+| Name  | Description  | Default  | 
+| --- | --- | --- |
+| `bgLightColor` | light background color | `#ffffff` (white) | 
+| `fgLightColor` | light foreground color | `#000000` (black) | 
+| `fgDarkColor` | dark background color | `#ffffff` (white) | 
+| `bgDarkColor` | dark foreground color | `#000000` (black) | 
