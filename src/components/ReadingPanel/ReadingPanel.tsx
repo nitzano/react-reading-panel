@@ -49,31 +49,23 @@ export function ReadingPanel({
   }, [targetId]);
 
   const handleFontIncrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) => increseFont(el, fontSizeUnits, fontSizeChange));
-    }
+    elements?.forEach((el) => increseFont(el, fontSizeUnits, fontSizeChange));
   };
 
   const handleFontDecrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) => decreaseFont(el, fontSizeUnits, fontSizeChange));
-    }
+    elements?.forEach((el) => decreaseFont(el, fontSizeUnits, fontSizeChange));
   };
 
   const handleLineHeightIncrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) =>
-        increaseLineHeight(el, fontSizeUnits, fontSizeChange)
-      );
-    }
+    elements?.forEach((el) =>
+      increaseLineHeight(el, fontSizeUnits, fontSizeChange)
+    );
   };
 
   const handleLineHeightDecrease = () => {
-    if (elements?.length) {
-      elements.forEach((el) =>
-        decreaseLineHeight(el, fontSizeUnits, fontSizeChange)
-      );
-    }
+    elements?.forEach((el) =>
+      decreaseLineHeight(el, fontSizeUnits, fontSizeChange)
+    );
   };
 
   return (
