@@ -2,7 +2,13 @@
 
 <div align="center">
 Add accessibility reading panel to any website! 
+<br/><br/>
+<a href="https://github.com/nitzano/react-reading-panel">Source Code</a> |
+<a href="https://github.com/nitzano/react-reading-panel">Live Demo</a>
+
 </div>
+
+
 
 \
 [![npm](https://img.shields.io/npm/v/react-reading-panel)](https://www.npmjs.com/package/react-reading-panel)
