@@ -15,7 +15,7 @@ interface Props {
   targetId?: string;
   fontUnits?: string;
   fontChange?: number;
-  theme?: Settings;
+  settings?: Settings;
 }
 
 export function ReadingPanel({
