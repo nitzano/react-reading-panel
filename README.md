@@ -14,11 +14,12 @@ Add accessibility reading panel to any website!
 
 # Main Features
 
-* Change font size
-* Change line spacing
-* Change letter spacing
-* Switch between light/dark mode
-* More features to come soon!
+1. Change font size
+2. Change line spacing
+3. Change letter spacing
+4. Switch between light/dark colors
+ 
+ More features to come soon!
 
 # Usage
 
@@ -43,3 +44,19 @@ Add accessibility reading panel to any website!
 
 
 # Settings
+
+| Name  | Description  | Default  | 
+|---|---|---|
+| `colorSetting` | light/dark default colors | see below |
+| `defaultTheme` | default theme to start from |`light` |
+| `fontSizeStep` | font size step size | 1 |
+| `fontSizeUnits` | font size units | `px` |
+| `letterSpacingDefaultSize` | letter spacing default size | `1px` |
+| `letterSpacingUnit` |  letter spacing unit| `px` |
+| `lineHeightDefaultSize` | line height default size | `1rem` |
+| `lineHeightsStep` | line height step size | 1 |
+| `lineHeightUnits` | line height units | `px` |
+
+
+## Color Setting
+

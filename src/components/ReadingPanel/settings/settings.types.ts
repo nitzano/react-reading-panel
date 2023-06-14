@@ -18,15 +18,15 @@ export interface ColorSettings {
 
 export interface Settings {
   colorSettings: ColorSettings;
+  defaultTheme: Theme;
   fontSizeStep: number;
   fontSizeUnits: string;
-  letterSpacingStep: number;
   letterSpacingDefaultSize: string;
+  letterSpacingStep: number;
   letterSpacingUnit: string;
   lineHeightDefaultSize: string;
   lineHeightsStep: number
   lineHeightUnits: string;
-  defaultTheme: Theme;
 }  
 
 export const defaultSettings: Settings = {
