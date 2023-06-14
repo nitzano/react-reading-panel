@@ -8,14 +8,14 @@ import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
 import { increaseLineHeight } from "./line-height/increase-line-height.util";
-import { Theme } from "./theme/theme.types";
+import { Settings } from "./settings/settings.types";
 
 interface Props {
   targetClass?: string;
   targetId?: string;
   fontUnits?: string;
   fontChange?: number;
-  theme?: Theme;
+  theme?: Settings;
 }
 
 export function ReadingPanel({

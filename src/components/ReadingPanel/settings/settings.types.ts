@@ -1,4 +1,4 @@
-export interface Theme {
+export interface Settings {
     bgLightColor: string;
     fgLightColor: string;
     bgDarkColor: string;
@@ -6,7 +6,7 @@ export interface Theme {
     defaultTheme: "light" | "dark";
   }
   
-  export const defaultTheme: Theme = {
+  export const defaultTheme: Settings = {
     defaultTheme: "light",
     bgLightColor: "#ffffff",
     fgLightColor: "#000000",
