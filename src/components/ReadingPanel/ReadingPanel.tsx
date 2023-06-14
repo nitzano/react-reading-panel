@@ -106,7 +106,7 @@ export function ReadingPanel({
       <PanelButton onClick={handleLineHeightDecrease}>
         <IoMenuOutline></IoMenuOutline>
       </PanelButton>
-      <PanelButton>
+      <PanelButton onClick={handleColorChange}>
         <VscColorMode></VscColorMode>
       </PanelButton>
       <PanelButton>
