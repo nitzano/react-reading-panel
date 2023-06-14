@@ -3,8 +3,8 @@
 <div align="center">
 Add accessibility reading panel to any website! 
 <br/><br/>
-<a href="https://github.com/nitzano/react-reading-panel">Source Code</a> |
-<a href="https://github.com/nitzano/react-reading-panel">Live Demo</a>
+<a target="_blank" href="https://github.com/nitzano/react-reading-panel">Source Code</a> |
+<a target="_blank" href="https://github.com/nitzano/react-reading-panel">Live Demo</a>
 
 </div>
 
