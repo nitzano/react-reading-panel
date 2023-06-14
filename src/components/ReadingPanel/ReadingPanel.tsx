@@ -7,6 +7,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { MdTextDecrease, MdTextIncrease } from "react-icons/md";
 import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
+import { changeColorTheme } from "./colors/change-color-theme.util";
 import { decreaseFont } from "./font-size/decrease-font.util";
 import { increseFont } from "./font-size/increase-font.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
@@ -78,6 +79,17 @@ export function ReadingPanel({
     elements?.forEach((el) =>
       decreaseLineHeight(el, settings.lineHeightUnits, settings.lineHeightsStep)
     );
+  };
+
+  const handleColorChange = () => {
+    elements?.forEach((el) => {
+      changeColorTheme(el, settings.defaultTheme, settings.colorSettings);
+    });
+
+    setSettings((currentSettings) => ({
+      ...currentSettings,
+      defaultTheme: currentSettings.defaultTheme === "light" ? "dark" : "light",
+    }));
   };
 
   return (
