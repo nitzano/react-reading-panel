@@ -4241,7 +4241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.167":
+"@types/lodash@npm:^4.14.167, @types/lodash@npm:^4.14.195":
   version: 4.14.195
   resolution: "@types/lodash@npm:4.14.195"
   checksum: 39b75ca635b3fa943d17d3d3aabc750babe4c8212485a4df166fe0516e39288e14b0c60afc6e21913cc0e5a84734633c71e617e2bd14eaa1cf51b8d7799c432e
@@ -11420,6 +11420,7 @@ __metadata:
     "@storybook/react": ^7.0.20
     "@storybook/react-vite": ^7.0.20
     "@storybook/testing-library": ^0.0.14-next.2
+    "@types/lodash": ^4.14.195
     "@types/prettier": ^2
     "@types/react": ^18.0.37
     "@types/react-dom": ^18.0.11
@@ -11432,6 +11433,7 @@ __metadata:
     eslint-plugin-storybook: ^0.6.12
     husky: ^8.0.3
     lint-staged: ^13.2.2
+    lodash: ^4.17.21
     prettier: ^2.8.8
     prop-types: ^15.8.1
     react: ^18.2.0
