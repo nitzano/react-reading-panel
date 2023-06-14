@@ -1,6 +1,10 @@
 import { merge } from "lodash";
 import { useEffect, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineEye,
+  AiOutlineEyeInvisible,
+  AiOutlineMenu,
+} from "react-icons/ai";
 import { FaExpandAlt } from "react-icons/fa";
 import { ImShrink2 } from "react-icons/im";
 import { IoMenuOutline } from "react-icons/io5";
@@ -29,6 +33,7 @@ export function ReadingPanel({
 }: Props) {
   const [elements, setElements] = useState<HTMLElement[] | null>();
   const [settings, setSettings] = useState<Settings>(defaultSettings);
+  const [isOpen, setIsOpen] = useState<boolean>(settings.startOpen);
 
   useEffect(() => {
     if (targetClass) {
@@ -126,29 +131,49 @@ export function ReadingPanel({
     }));
   };
 
+  const handleSwitchOpen = () => {
+    setIsOpen((currentIsOpen) => !currentIsOpen);
+  };
+
   return (
     <Container>
-      <PanelButton onClick={handleFontIncrease}>
-        <MdTextIncrease></MdTextIncrease>
-      </PanelButton>
-      <PanelButton onClick={handleFontDecrease}>
-        <MdTextDecrease></MdTextDecrease>
-      </PanelButton>
-      <PanelButton onClick={handleLineHeightIncrease}>
-        <AiOutlineMenu></AiOutlineMenu>
-      </PanelButton>
-      <PanelButton onClick={handleLineHeightDecrease}>
-        <IoMenuOutline></IoMenuOutline>
-      </PanelButton>
-      <PanelButton onClick={handleColorChange}>
-        <VscColorMode></VscColorMode>
-      </PanelButton>
-      <PanelButton>
-        <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
-      </PanelButton>
-      <PanelButton onClick={handleLetterSpacingDecrease}>
-        <ImShrink2></ImShrink2>
-      </PanelButton>
+      <>
+        {!isOpen && (
+          <PanelButton onClick={handleSwitchOpen}>
+            <AiOutlineEye></AiOutlineEye>
+          </PanelButton>
+        )}
+        {isOpen && (
+          <PanelButton onClick={handleSwitchOpen}>
+            <AiOutlineEyeInvisible></AiOutlineEyeInvisible>
+          </PanelButton>
+        )}
+      </>
+
+      <>
+        <PanelButton onClick={handleFontIncrease}>
+          <MdTextIncrease></MdTextIncrease>
+        </PanelButton>
+
+        <PanelButton onClick={handleFontDecrease}>
+          <MdTextDecrease></MdTextDecrease>
+        </PanelButton>
+        <PanelButton onClick={handleLineHeightIncrease}>
+          <AiOutlineMenu></AiOutlineMenu>
+        </PanelButton>
+        <PanelButton onClick={handleLineHeightDecrease}>
+          <IoMenuOutline></IoMenuOutline>
+        </PanelButton>
+        <PanelButton onClick={handleColorChange}>
+          <VscColorMode></VscColorMode>
+        </PanelButton>
+        <PanelButton>
+          <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
+        </PanelButton>
+        <PanelButton onClick={handleLetterSpacingDecrease}>
+          <ImShrink2></ImShrink2>
+        </PanelButton>
+      </>
     </Container>
   );
 }
