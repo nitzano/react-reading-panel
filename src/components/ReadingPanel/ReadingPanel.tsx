@@ -164,21 +164,31 @@ export function ReadingPanel({
               <MdTextDecrease></MdTextDecrease>
             </PanelButton>
           )}
-          <PanelButton onClick={handleLineHeightIncrease}>
-            <AiOutlineMenu></AiOutlineMenu>
-          </PanelButton>
-          <PanelButton onClick={handleLineHeightDecrease}>
-            <IoMenuOutline></IoMenuOutline>
-          </PanelButton>
-          <PanelButton onClick={handleColorChange}>
-            <VscColorMode></VscColorMode>
-          </PanelButton>
-          <PanelButton>
-            <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
-          </PanelButton>
-          <PanelButton onClick={handleLetterSpacingDecrease}>
-            <ImShrink2></ImShrink2>
-          </PanelButton>
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleLineHeightIncrease}>
+              <AiOutlineMenu></AiOutlineMenu>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleLineHeightDecrease}>
+              <IoMenuOutline></IoMenuOutline>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleColorChange}>
+              <VscColorMode></VscColorMode>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton>
+              <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleLetterSpacingDecrease}>
+              <ImShrink2></ImShrink2>
+            </PanelButton>
+          )}
         </>
       )}
     </Container>
