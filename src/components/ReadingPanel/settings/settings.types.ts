@@ -17,6 +17,8 @@ export interface ColorSettings {
 
   export type PanelDirection = 'horizontal' | 'vertical'
 
+      export type ButtonTypes = 'increase_font' | 'decrease_font'
+
 export interface Settings {
   colorSettings: ColorSettings;
   defaultTheme: Theme;
