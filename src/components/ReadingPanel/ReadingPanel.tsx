@@ -50,9 +50,11 @@ export function ReadingPanel({
 
   useEffect(() => {
     if (userSettings) {
-      const newSettings = merge(settings, userSettings);
+      const newSettings = merge(defaultSettings, userSettings);
       if (userSettings.showButtons)
         newSettings.showButtons = userSettings.showButtons;
+
+      console.log(`settings=${JSON.stringify(newSettings)}`);
       setSettings(newSettings);
     }
   }, [userSettings]);
