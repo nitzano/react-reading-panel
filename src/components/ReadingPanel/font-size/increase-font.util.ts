@@ -1,6 +1,6 @@
 import { getStyleProp } from "../utils/get-style-prop.util";
 
-export function increseFont(
+export function increaseFont(
   element: HTMLElement,
   fontUnits: string,
   fontChange: number

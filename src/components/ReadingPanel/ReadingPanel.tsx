@@ -13,7 +13,7 @@ import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
 import { changeColorTheme } from "./colors/change-color-theme.util";
 import { decreaseFont } from "./font-size/decrease-font.util";
-import { increseFont } from "./font-size/increase-font.util";
+import { increaseFont } from "./font-size/increase-font.util";
 import { decreaseLetterSpacing } from "./letter-spacing/decrease-letter-spacing.util";
 import { increaseLetterSpacing } from "./letter-spacing/increase-letter-spacing.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
@@ -72,7 +72,7 @@ export function ReadingPanel({
 
   const handleFontIncrease = () => {
     elements?.forEach((el) =>
-      increseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+      increaseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
     );
   };
 
