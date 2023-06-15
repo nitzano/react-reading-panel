@@ -33,6 +33,16 @@ Add accessibility reading panel to any website!
  
  More features are coming soon!
 
+# Installation
+
+```bash
+npm install --save react-reading-panel
+```
+OR
+```bash
+yarn add react-reading-panel
+```
+
 # Usage
 
 ## Target by Id
