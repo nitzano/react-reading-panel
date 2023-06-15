@@ -38,6 +38,7 @@ export interface Settings {
   lineHeightUnits: string;
   startOpen: boolean;
   direction: PanelDirection;
+  showButtons: ButtonTypes[];
 }
 
 export const defaultSettings: Settings = {
@@ -53,4 +54,13 @@ export const defaultSettings: Settings = {
   lineHeightUnits: "px",
   startOpen: false,
   direction: "horizontal",
+  showButtons: [
+    "increase_font",
+    "decrease_font",
+    "increase_line_height",
+    "decrease_line_height",
+    "change_color_scheme",
+    "increase_letter_spacing",
+    "decrease_letter_spacing",
+  ],
 };
