@@ -17,13 +17,13 @@ export type Theme = "light" | "dark";
 export type PanelDirection = "horizontal" | "vertical";
 
 export type ButtonTypes =
-  | "increase_font"
-  | "decrease_font"
-  | "increase_line_height"
-  | "decrease_line_height"
   | "change_color_scheme"
+  | "decrease_font"
+  | "decrease_letter_spacing"
+  | "decrease_line_height"
+  | "increase_font"
   | "increase_letter_spacing"
-  | "decrease_letter_spacing";
+  | "increase_line_height";
 
 export interface Settings {
   colorSettings: ColorSettings;
