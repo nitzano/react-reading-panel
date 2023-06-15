@@ -23,7 +23,7 @@ const ReadingPanelTemplate: Story = {
   },
 };
 
-export const Default: Story = {
+export const Primary: Story = {
   ...ReadingPanelTemplate,
 };
 
