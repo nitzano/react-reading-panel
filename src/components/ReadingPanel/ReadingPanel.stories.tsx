@@ -68,7 +68,9 @@ export const Partial: Story = {
     <>
       <ReadingPanel
         targetId="sample"
-        settings={{ showButtons: ["increase_font", "change_color_scheme"] }}
+        settings={{
+          showButtons: ["increase_font_size", "change_color_scheme"],
+        }}
       ></ReadingPanel>
       <div>
         <p id="sample" style={{ userSelect: "none", maxWidth: "400px" }}>

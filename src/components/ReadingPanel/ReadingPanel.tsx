@@ -35,6 +35,8 @@ export function ReadingPanel({
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [isOpen, setIsOpen] = useState<boolean>(settings.startOpen);
 
+  const { showButtons } = settings;
+
   useEffect(() => {
     if (targetClass) {
       const htmlCollection: HTMLCollectionOf<Element> =
@@ -152,12 +154,16 @@ export function ReadingPanel({
 
       {isOpen && (
         <>
-          <PanelButton onClick={handleFontIncrease}>
-            <MdTextIncrease></MdTextIncrease>
-          </PanelButton>
-          <PanelButton onClick={handleFontDecrease}>
-            <MdTextDecrease></MdTextDecrease>
-          </PanelButton>
+          {showButtons.includes("increase_font_size") && (
+            <PanelButton onClick={handleFontIncrease}>
+              <MdTextIncrease></MdTextIncrease>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleFontDecrease}>
+              <MdTextDecrease></MdTextDecrease>
+            </PanelButton>
+          )}
           <PanelButton onClick={handleLineHeightIncrease}>
             <AiOutlineMenu></AiOutlineMenu>
           </PanelButton>
