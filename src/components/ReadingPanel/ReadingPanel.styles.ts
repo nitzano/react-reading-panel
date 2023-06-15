@@ -4,7 +4,6 @@ import { PanelDirection } from "./settings/settings.types";
 
 export const PanelButton = styled.div`
 
-
 cursor: pointer;
 height: 35px;
 width: 35px;
