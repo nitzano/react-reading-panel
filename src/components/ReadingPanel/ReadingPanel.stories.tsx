@@ -69,6 +69,8 @@ export const Partial: Story = {
       <ReadingPanel
         targetId="sample"
         settings={{
+          direction: "horizontal",
+          startOpen: true,
           showButtons: ["increase_font_size", "change_colors"],
         }}
       ></ReadingPanel>
@@ -78,13 +80,6 @@ export const Partial: Story = {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames. Ultrices neque ornare aenean euismod elementum nisi quis.
-          Euismod elementum nisi quis eleifend quam adipiscing. Est ante in nibh
-          mauris cursus. Morbi tristique senectus et netus et malesuada fames ac
-          turpis. Vitae purus faucibus ornare suspendisse. In nisl nisi
-          scelerisque eu ultrices vitae auctor eu. Purus viverra accumsan in
-          nisl nisi scelerisque eu ultrices vitae. Ultrices gravida dictum fusce
-          ut. At quis risus sed vulputate odio. Nisl tincidunt eget nullam non.
-          Malesuada fames ac turpis egestas sed tempus.
         </p>
       </div>
     </>
