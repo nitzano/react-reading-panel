@@ -1,7 +1,7 @@
 <h1 align="center">react-reading-panel 📖</h1> 
 
 <div align="center">
-Let users change reading options to any component! 
+Add accessibility reading panel to any website 
 <br/><br/>
 <a target="_blank" href="https://github.com/nitzano/react-reading-panel">Source Code</a> |
 <a target="_blank" href="https://react-reading-panel-demo.vercel.app">Live Demo</a>

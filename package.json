@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.6.0",
   "version": "0.0.0-development",
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
-  "description": "Let users change reading options to any component",
+  "description": "Add accessibility reading panel to any website",
   "license": "MIT",
   "type": "module",
   "repository": "https://github.com/nitzano/react-reading-panel.git",
