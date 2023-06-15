@@ -74,6 +74,7 @@ yarn add react-reading-panel
 |---|---|---|
 | `colorSetting` | light/dark default colors | see below |
 | `defaultTheme` | default theme to start from |`light` |
+| `direction` | panel direction | `horizontal` |
 | `fontSizeStep` | font size step size | 1 |
 | `fontSizeUnits` | font size units | `px` |
 | `letterSpacingDefaultSize` | letter spacing default size | `1px` |
