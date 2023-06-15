@@ -15,6 +15,7 @@ export interface ColorSettings {
 
   export type Theme = 'light' | 'dark';
 
+  export type PanelDirection = 'horizontal' | 'vertical'
 
 export interface Settings {
   colorSettings: ColorSettings;
@@ -28,7 +29,7 @@ export interface Settings {
   lineHeightsStep: number
   lineHeightUnits: string;
   startOpen: boolean;
-  direction: 'horizontal' | 'vertical';
+  direction: PanelDirection;
 }  
 
 export const defaultSettings: Settings = {

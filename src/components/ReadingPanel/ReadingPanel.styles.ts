@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { PanelDirection } from "./settings/settings.types";
 
 
 export const PanelButton = styled.div`
+
+
 cursor: pointer;
 height: 35px;
 width: 35px;
@@ -15,8 +18,9 @@ border-radius: 50%;
 `;
 
 
-export const Container = styled.div`
+export const Container = styled.div<{ direction?: PanelDirection}>`
   display: flex;
+  flex-direction: ${props => props.direction === 'vertical' ? 'column' : 'row'};
   align-items: center;
   background: white;
   padding: 5px 2px;

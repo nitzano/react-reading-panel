@@ -136,7 +136,7 @@ export function ReadingPanel({
   };
 
   return (
-    <Container>
+    <Container direction={settings.direction}>
       <>
         {!isOpen && (
           <PanelButton onClick={handleSwitchOpen}>
@@ -155,7 +155,6 @@ export function ReadingPanel({
           <PanelButton onClick={handleFontIncrease}>
             <MdTextIncrease></MdTextIncrease>
           </PanelButton>
-
           <PanelButton onClick={handleFontDecrease}>
             <MdTextDecrease></MdTextDecrease>
           </PanelButton>
