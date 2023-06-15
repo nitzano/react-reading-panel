@@ -9,27 +9,26 @@ const meta: Meta<typeof ReadingPanel> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof ReadingPanel>;
 
+const ReadingPanelTemplate: Story = {
+  render: ({ ...args }) => {
+    return (
+      <>
+        <ReadingPanel {...args} targetClass="sample" />
+        <div className="sample">I am sample text</div>
+      </>
+    );
+  },
+};
+
 export const Default: Story = {
-  args: {},
-  render: () => (
-    <>
-      <ReadingPanel targetId="sample"></ReadingPanel>
-      <div>
-        <p id="sample" style={{ userSelect: "none", maxWidth: "400px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames. Ultrices neque ornare aenean euismod elementum nisi quis.
-          Euismod elementum nisi quis eleifend quam adipiscing. Est ante in nibh
-        </p>
-      </div>
-    </>
-  ),
+  ...ReadingPanelTemplate,
 };
 
 export const Vertical: Story = {
+  ...ReadingPanelTemplate,
   args: {
     settings: {
       direction: "vertical",
@@ -38,9 +37,9 @@ export const Vertical: Story = {
 };
 
 export const Partial: Story = {
+  ...ReadingPanelTemplate,
   args: {
     settings: {
-      direction: "horizontal",
       startOpen: true,
       showButtons: ["increase_font_size", "change_colors"],
     },
