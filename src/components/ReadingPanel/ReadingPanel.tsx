@@ -164,27 +164,27 @@ export function ReadingPanel({
               <MdTextDecrease></MdTextDecrease>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes("increase_line_height") && (
             <PanelButton onClick={handleLineHeightIncrease}>
               <AiOutlineMenu></AiOutlineMenu>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes("decrease_line_height") && (
             <PanelButton onClick={handleLineHeightDecrease}>
               <IoMenuOutline></IoMenuOutline>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes("change_colors") && (
             <PanelButton onClick={handleColorChange}>
               <VscColorMode></VscColorMode>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes("increase_letter_spacing") && (
             <PanelButton>
               <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes("decrease_letter_spacing") && (
             <PanelButton onClick={handleLetterSpacingDecrease}>
               <ImShrink2></ImShrink2>
             </PanelButton>

@@ -17,7 +17,7 @@ export type Theme = "light" | "dark";
 export type PanelDirection = "horizontal" | "vertical";
 
 export type ButtonType =
-  | "change_color_scheme"
+  | "change_colors"
   | "decrease_font_size"
   | "decrease_letter_spacing"
   | "decrease_line_height"
@@ -59,7 +59,7 @@ export const defaultSettings: Settings = {
     "decrease_font_size",
     "increase_line_height",
     "decrease_line_height",
-    "change_color_scheme",
+    "change_colors",
     "increase_letter_spacing",
     "decrease_letter_spacing",
   ],
