@@ -53,7 +53,7 @@ yarn add react-reading-panel
 ```jsx
 <ReadingPanel targetId="sample"></ReadingPanel>
 <p id="sample">
-    Text to be changes
+    Text to be changed
 </p>
 ```
 
@@ -63,7 +63,7 @@ yarn add react-reading-panel
 ```jsx
 <ReadingPanel targetClass="sample"></ReadingPanel>
 <p className="sample">
-    Text to be changes
+    Text to be changed
 </p>
 ```
 
