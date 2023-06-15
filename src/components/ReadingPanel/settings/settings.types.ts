@@ -19,7 +19,11 @@ export type PanelDirection = "horizontal" | "vertical";
 export type ButtonTypes =
   | "increase_font"
   | "decrease_font"
-  | "increase_line_height";
+  | "increase_line_height"
+  | "decrease_line_height"
+  | "change_color_scheme"
+  | "increase_letter_spacing"
+  | "decrease_letter_spacing";
 
 export interface Settings {
   colorSettings: ColorSettings;
