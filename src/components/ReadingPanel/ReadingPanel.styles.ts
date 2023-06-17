@@ -5,6 +5,7 @@ export const PanelButton = styled.button`
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  border: initial;
   background: #e2e1e1;
   color: black;
   font-size: 1rem;
