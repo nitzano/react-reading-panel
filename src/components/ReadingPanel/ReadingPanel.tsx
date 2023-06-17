@@ -56,10 +56,10 @@ export function ReadingPanel({
         newSettings.showButtons = userSettings.showButtons;
       }
       setSettings(newSettings);
-      setIsOpen(newSettings.startOpen)
+      setIsOpen(newSettings.startOpen);
     } else {
-      setSettings(defaultSettings)
-      setIsOpen(defaultSettings.startOpen)
+      setSettings(defaultSettings);
+      setIsOpen(defaultSettings.startOpen);
     }
   }, [userSettings]);
 
