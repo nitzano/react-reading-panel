@@ -13,7 +13,7 @@ import { VscColorMode } from "react-icons/vsc";
 import { Container, PanelButton } from "./ReadingPanel.styles";
 import { changeColorTheme } from "./colors/change-color-theme.util";
 import { decreaseFont } from "./font-size/decrease-font.util";
-import { increseFont } from "./font-size/increase-font.util";
+import { increaseFont } from "./font-size/increase-font.util";
 import { decreaseLetterSpacing } from "./letter-spacing/decrease-letter-spacing.util";
 import { increaseLetterSpacing } from "./letter-spacing/increase-letter-spacing.util";
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
@@ -35,6 +35,9 @@ export function ReadingPanel({
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [isOpen, setIsOpen] = useState<boolean>(settings.startOpen);
 
+  const { showButtons } = settings;
+  console.debug(`render! renderSettings=${JSON.stringify(settings, null, 2)}`);
+
   useEffect(() => {
     if (targetClass) {
       const htmlCollection: HTMLCollectionOf<Element> =
@@ -48,8 +51,15 @@ export function ReadingPanel({
 
   useEffect(() => {
     if (userSettings) {
-      const newSettings = merge(settings, userSettings);
+      const newSettings = merge({}, defaultSettings, userSettings);
+      if (userSettings.showButtons) {
+        newSettings.showButtons = userSettings.showButtons;
+      }
       setSettings(newSettings);
+      setIsOpen(newSettings.startOpen);
+    } else {
+      setSettings(defaultSettings);
+      setIsOpen(defaultSettings.startOpen);
     }
   }, [userSettings]);
 
@@ -66,7 +76,7 @@ export function ReadingPanel({
 
   const handleFontIncrease = () => {
     elements?.forEach((el) =>
-      increseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
+      increaseFont(el, settings.fontSizeUnits, settings.fontSizeStep)
     );
   };
 
@@ -152,27 +162,41 @@ export function ReadingPanel({
 
       {isOpen && (
         <>
-          <PanelButton onClick={handleFontIncrease}>
-            <MdTextIncrease></MdTextIncrease>
-          </PanelButton>
-          <PanelButton onClick={handleFontDecrease}>
-            <MdTextDecrease></MdTextDecrease>
-          </PanelButton>
-          <PanelButton onClick={handleLineHeightIncrease}>
-            <AiOutlineMenu></AiOutlineMenu>
-          </PanelButton>
-          <PanelButton onClick={handleLineHeightDecrease}>
-            <IoMenuOutline></IoMenuOutline>
-          </PanelButton>
-          <PanelButton onClick={handleColorChange}>
-            <VscColorMode></VscColorMode>
-          </PanelButton>
-          <PanelButton>
-            <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
-          </PanelButton>
-          <PanelButton onClick={handleLetterSpacingDecrease}>
-            <ImShrink2></ImShrink2>
-          </PanelButton>
+          {showButtons.includes("increase_font_size") && (
+            <PanelButton onClick={handleFontIncrease}>
+              <MdTextIncrease></MdTextIncrease>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_font_size") && (
+            <PanelButton onClick={handleFontDecrease}>
+              <MdTextDecrease></MdTextDecrease>
+            </PanelButton>
+          )}
+          {showButtons.includes("increase_line_height") && (
+            <PanelButton onClick={handleLineHeightIncrease}>
+              <AiOutlineMenu></AiOutlineMenu>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_line_height") && (
+            <PanelButton onClick={handleLineHeightDecrease}>
+              <IoMenuOutline></IoMenuOutline>
+            </PanelButton>
+          )}
+          {showButtons.includes("change_colors") && (
+            <PanelButton onClick={handleColorChange}>
+              <VscColorMode></VscColorMode>
+            </PanelButton>
+          )}
+          {showButtons.includes("increase_letter_spacing") && (
+            <PanelButton>
+              <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
+            </PanelButton>
+          )}
+          {showButtons.includes("decrease_letter_spacing") && (
+            <PanelButton onClick={handleLetterSpacingDecrease}>
+              <ImShrink2></ImShrink2>
+            </PanelButton>
+          )}
         </>
       )}
     </Container>

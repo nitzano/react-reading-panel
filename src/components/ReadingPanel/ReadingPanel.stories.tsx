@@ -9,55 +9,56 @@ const meta: Meta<typeof ReadingPanel> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof ReadingPanel>;
 
+const ReadingPanelTemplate: Story = {
+  render: ({ ...args }) => {
+    return (
+      <>
+        <ReadingPanel {...args} targetClass="sample" />
+        <div className="sample" style={{ marginTop: 100 }}>
+          Lorem ipsum dolor sit amet. Id consequuntur labore sed iste omnis aut
+          ratione internos aut ducimus voluptas. Nam quia adipisci et quam
+          laborum sed deserunt aliquid qui consequatur quia et autem inventore
+          ut impedit galisum et cupiditate libero. Qui galisum Quis ea laborum
+          ullam est sequi cumque in molestiae eius. Est omnis voluptates a alias
+          aliquid in similique unde a cumque similique non debitis amet aut
+          ullam autem et repellat quae.
+        </div>
+      </>
+    );
+  },
+};
+
 export const Primary: Story = {
-  args: {},
-  render: () => (
-    <>
-      <ReadingPanel targetId="sample"></ReadingPanel>
-      <div>
-        <p id="sample" style={{ userSelect: "none", maxWidth: "400px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames. Ultrices neque ornare aenean euismod elementum nisi quis.
-          Euismod elementum nisi quis eleifend quam adipiscing. Est ante in nibh
-          mauris cursus. Morbi tristique senectus et netus et malesuada fames ac
-          turpis. Vitae purus faucibus ornare suspendisse. In nisl nisi
-          scelerisque eu ultrices vitae auctor eu. Purus viverra accumsan in
-          nisl nisi scelerisque eu ultrices vitae. Ultrices gravida dictum fusce
-          ut. At quis risus sed vulputate odio. Nisl tincidunt eget nullam non.
-          Malesuada fames ac turpis egestas sed tempus.
-        </p>
-      </div>
-    </>
-  ),
+  ...ReadingPanelTemplate,
+};
+
+export const StartOpen: Story = {
+  ...ReadingPanelTemplate,
+  args: {
+    settings: {
+      startOpen: true,
+    },
+  },
 };
 
 export const Vertical: Story = {
-  args: {},
-  render: () => (
-    <>
-      <ReadingPanel
-        targetId="sample"
-        settings={{ direction: "vertical" }}
-      ></ReadingPanel>
-      <div>
-        <p id="sample" style={{ userSelect: "none", maxWidth: "400px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames. Ultrices neque ornare aenean euismod elementum nisi quis.
-          Euismod elementum nisi quis eleifend quam adipiscing. Est ante in nibh
-          mauris cursus. Morbi tristique senectus et netus et malesuada fames ac
-          turpis. Vitae purus faucibus ornare suspendisse. In nisl nisi
-          scelerisque eu ultrices vitae auctor eu. Purus viverra accumsan in
-          nisl nisi scelerisque eu ultrices vitae. Ultrices gravida dictum fusce
-          ut. At quis risus sed vulputate odio. Nisl tincidunt eget nullam non.
-          Malesuada fames ac turpis egestas sed tempus.
-        </p>
-      </div>
-    </>
-  ),
+  ...ReadingPanelTemplate,
+  args: {
+    settings: {
+      direction: "vertical",
+    },
+  },
+};
+
+export const Partial: Story = {
+  ...ReadingPanelTemplate,
+  args: {
+    settings: {
+      startOpen: true,
+      showButtons: ["increase_font_size", "change_colors"],
+    },
+  },
 };

@@ -82,6 +82,7 @@ yarn add react-reading-panel
 | `lineHeightDefaultSize` | line height default size | `1rem` |
 | `lineHeightsStep` | line height step size | 1 |
 | `lineHeightUnits` | line height units | `px` |
+| `showButtons` | show only some of the buttons | shows everything |
 
 
 ## Color Setting

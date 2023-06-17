@@ -1,21 +1,29 @@
 export interface ColorSettings {
-    bgLightColor: string;
-    fgLightColor: string;
-    bgDarkColor: string;
-    fgDarkColor: string;
-  }
-  
-  export const defaultColorSettings: ColorSettings = {
-    
-    bgLightColor: "#ffffff",
-    fgLightColor: "#000000",
-    fgDarkColor: "#ffffff",
-    bgDarkColor: "#000000",
-  };
+  bgLightColor: string;
+  fgLightColor: string;
+  bgDarkColor: string;
+  fgDarkColor: string;
+}
 
-  export type Theme = 'light' | 'dark';
+export const defaultColorSettings: ColorSettings = {
+  bgLightColor: "#ffffff",
+  fgLightColor: "#000000",
+  fgDarkColor: "#ffffff",
+  bgDarkColor: "#000000",
+};
 
-  export type PanelDirection = 'horizontal' | 'vertical'
+export type Theme = "light" | "dark";
+
+export type PanelDirection = "horizontal" | "vertical";
+
+export type ButtonType =
+  | "change_colors"
+  | "decrease_font_size"
+  | "decrease_letter_spacing"
+  | "decrease_line_height"
+  | "increase_font_size"
+  | "increase_letter_spacing"
+  | "increase_line_height";
 
 export interface Settings {
   colorSettings: ColorSettings;
@@ -26,23 +34,33 @@ export interface Settings {
   letterSpacingStep: number;
   letterSpacingUnit: string;
   lineHeightDefaultSize: string;
-  lineHeightsStep: number
+  lineHeightsStep: number;
   lineHeightUnits: string;
   startOpen: boolean;
   direction: PanelDirection;
-}  
+  showButtons: ButtonType[];
+}
 
 export const defaultSettings: Settings = {
-  defaultTheme: 'light',
+  defaultTheme: "light",
   colorSettings: defaultColorSettings,
   fontSizeStep: 1,
-  fontSizeUnits: 'px',
+  fontSizeUnits: "px",
   letterSpacingStep: 1,
-  letterSpacingDefaultSize: '1px',
-  letterSpacingUnit: 'px',
-  lineHeightDefaultSize: '1rem',
+  letterSpacingDefaultSize: "1px",
+  letterSpacingUnit: "px",
+  lineHeightDefaultSize: "1rem",
   lineHeightsStep: 1,
-  lineHeightUnits: 'px',
+  lineHeightUnits: "px",
   startOpen: false,
-  direction: 'horizontal'
-}
+  direction: "horizontal",
+  showButtons: [
+    "increase_font_size",
+    "decrease_font_size",
+    "increase_line_height",
+    "decrease_line_height",
+    "change_colors",
+    "increase_letter_spacing",
+    "decrease_letter_spacing",
+  ],
+};
