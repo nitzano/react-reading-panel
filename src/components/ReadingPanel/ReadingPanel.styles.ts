@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { PanelDirection } from "./settings/settings.types";
 
-export const PanelButton = styled.div`
-  cursor: pointer;
+export const PanelButton = styled.button`
   height: 35px;
   width: 35px;
   border-radius: 50%;
