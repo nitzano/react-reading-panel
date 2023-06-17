@@ -11,7 +11,7 @@ Add accessibility reading panel to any website
 <br/>
 <div align="center">
 
-![Demo](https://github.com/nitzano/react-reading-panel/blob/bf4fe0dbdae44067d70b107a8d6863572ef6c90d/docs/demo.gif?raw=true)
+![Demo](https://github.com/nitzano/react-reading-panel/blob/06424141d7afdeeca31984966373adad379fd09d/docs/demo.gif)
 
 
 [![npm](https://img.shields.io/npm/v/react-reading-panel)](https://www.npmjs.com/package/react-reading-panel)
