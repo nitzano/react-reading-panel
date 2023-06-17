@@ -17,7 +17,7 @@ const ReadingPanelTemplate: Story = {
     return (
       <>
         <ReadingPanel {...args} targetClass="sample" />
-        <div className="sample">
+        <div className="sample" style={{ marginTop: 100 }}>
           Lorem ipsum dolor sit amet. Id consequuntur labore sed iste omnis aut
           ratione internos aut ducimus voluptas. Nam quia adipisci et quam
           laborum sed deserunt aliquid qui consequatur quia et autem inventore
