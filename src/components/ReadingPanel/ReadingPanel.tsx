@@ -56,10 +56,7 @@ export function ReadingPanel({
       console.log(`userSettings=${JSON.stringify(userSettings, null, 2)}`);
       console.log(`newSettings=${JSON.stringify(newSettings, null, 2)}`);
       setSettings(newSettings);
-    } else {
-      console.log("using defaults");
-      setSettings(defaultSettings);
-    }
+    } 
   }, [userSettings]);
 
   useEffect(() => {
