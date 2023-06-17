@@ -36,7 +36,7 @@ export function ReadingPanel({
   const [isOpen, setIsOpen] = useState<boolean>(settings.startOpen);
 
   const { showButtons } = settings;
-  console.log(`render! renderSettings=${JSON.stringify(settings, null, 2)}`);
+  console.debug(`render! renderSettings=${JSON.stringify(settings, null, 2)}`);
 
   useEffect(() => {
     if (targetClass) {
