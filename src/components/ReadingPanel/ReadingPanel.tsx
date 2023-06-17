@@ -51,12 +51,16 @@ export function ReadingPanel({
 
   useEffect(() => {
     if (userSettings) {
-      console.log("using user");
-      const newSettings = merge(defaultSettings, userSettings);
-      console.log(`userSettings=${JSON.stringify(userSettings, null, 2)}`);
-      console.log(`newSettings=${JSON.stringify(newSettings, null, 2)}`);
+      const newSettings = merge({}, defaultSettings, userSettings);
+      if (userSettings.showButtons) {
+        newSettings.showButtons = userSettings.showButtons;
+      }
       setSettings(newSettings);
-    } 
+      setIsOpen(newSettings.startOpen)
+    } else {
+      setSettings(defaultSettings)
+      setIsOpen(defaultSettings.startOpen)
+    }
   }, [userSettings]);
 
   useEffect(() => {
