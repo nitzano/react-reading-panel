@@ -27,6 +27,16 @@ export const Primary: Story = {
   ...ReadingPanelTemplate,
 };
 
+export const StartOpen: Story = {
+  ...ReadingPanelTemplate,
+  args: {
+    settings: {
+      startOpen: true,
+    },
+  },
+};
+
+
 export const Vertical: Story = {
   ...ReadingPanelTemplate,
   args: {
