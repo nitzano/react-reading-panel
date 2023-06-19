@@ -3217,17 +3217,17 @@ __metadata:
   linkType: hard
 
 "@storybook/addon-links@npm:^7.0.20":
-  version: 7.0.20
-  resolution: "@storybook/addon-links@npm:7.0.20"
+  version: 7.0.22
+  resolution: "@storybook/addon-links@npm:7.0.22"
   dependencies:
-    "@storybook/client-logger": 7.0.20
-    "@storybook/core-events": 7.0.20
+    "@storybook/client-logger": 7.0.22
+    "@storybook/core-events": 7.0.22
     "@storybook/csf": ^0.1.0
     "@storybook/global": ^5.0.0
-    "@storybook/manager-api": 7.0.20
-    "@storybook/preview-api": 7.0.20
-    "@storybook/router": 7.0.20
-    "@storybook/types": 7.0.20
+    "@storybook/manager-api": 7.0.22
+    "@storybook/preview-api": 7.0.22
+    "@storybook/router": 7.0.22
+    "@storybook/types": 7.0.22
     prop-types: ^15.7.2
     ts-dedent: ^2.0.0
   peerDependencies:
@@ -3238,7 +3238,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 61cf9b12ed560d2125ea5a229ecde847c6da81e653a1c88692b542f56f9b7c148a7ead08553f2c842e97946e518e487098cfd99df5841b4a2f450942ec303dc5
+  checksum: 1a56a8734dc9394390faea85d15a015ec03c7ee397f85708ab9097b1309aac40eee5b8f0bd9d350aae8ad5621406abee37b5d245fd05aef38ea57c8af62743f8
   languageName: node
   linkType: hard
 
