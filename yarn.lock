@@ -3335,7 +3335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:7.0.20, @storybook/blocks@npm:^7.0.20":
+"@storybook/blocks@npm:7.0.20":
   version: 7.0.20
   resolution: "@storybook/blocks@npm:7.0.20"
   dependencies:
@@ -3365,6 +3365,39 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 352d4f800388640dec8166f5aaa906358c11f11787bcfd9fdf4584cbc0c001b7c486639f62c22b915eab411bf87a00feb955fe58c8df1557bf57fa2ec435fc4f
+  languageName: node
+  linkType: hard
+
+"@storybook/blocks@npm:^7.0.20":
+  version: 7.0.22
+  resolution: "@storybook/blocks@npm:7.0.22"
+  dependencies:
+    "@storybook/channels": 7.0.22
+    "@storybook/client-logger": 7.0.22
+    "@storybook/components": 7.0.22
+    "@storybook/core-events": 7.0.22
+    "@storybook/csf": ^0.1.0
+    "@storybook/docs-tools": 7.0.22
+    "@storybook/global": ^5.0.0
+    "@storybook/manager-api": 7.0.22
+    "@storybook/preview-api": 7.0.22
+    "@storybook/theming": 7.0.22
+    "@storybook/types": 7.0.22
+    "@types/lodash": ^4.14.167
+    color-convert: ^2.0.1
+    dequal: ^2.0.2
+    lodash: ^4.17.21
+    markdown-to-jsx: ^7.1.8
+    memoizerific: ^1.11.3
+    polished: ^4.2.2
+    react-colorful: ^5.1.2
+    telejson: ^7.0.3
+    ts-dedent: ^2.0.0
+    util-deprecate: ^1.0.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 2a61b8bf1f756218b0d3789df547be9389e2ef9cf97d5aa7622f7ace440e8983a70e4347bb4a9973ec88527710699a8c7cbef0aa3f907c2ad78a6b33b2d84484
   languageName: node
   linkType: hard
 
@@ -3621,6 +3654,25 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 670ac2e6abf1b888b605b313d90e12ec7d800cdd9b9baaa5e4c27160cc59117ac1d8aaef374ed2e4df1670f76ab7600a7c3a0bd8c923a3ab7b64ad7026ad3877
+  languageName: node
+  linkType: hard
+
+"@storybook/components@npm:7.0.22":
+  version: 7.0.22
+  resolution: "@storybook/components@npm:7.0.22"
+  dependencies:
+    "@storybook/client-logger": 7.0.22
+    "@storybook/csf": ^0.1.0
+    "@storybook/global": ^5.0.0
+    "@storybook/theming": 7.0.22
+    "@storybook/types": 7.0.22
+    memoizerific: ^1.11.3
+    use-resize-observer: ^9.1.0
+    util-deprecate: ^1.0.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 92b804d5dad1678312042f219af2cfeac7a7ad699ab2936b48389dd9add846dc8c8e5620361fa7e0a4840efc2b40b7e5437729fad7b7f418784223cf47fadd78
   languageName: node
   linkType: hard
 
