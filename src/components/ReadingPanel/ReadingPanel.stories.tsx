@@ -1,6 +1,7 @@
 // Button.stories.ts|tsx
 
 import type { Meta, StoryObj } from "@storybook/react";
+import { ButtonTypes, PanelDirections } from "../../constants";
 
 import { ReadingPanel } from "./ReadingPanel";
 
@@ -48,7 +49,7 @@ export const Vertical: Story = {
   ...ReadingPanelTemplate,
   args: {
     settings: {
-      direction: "vertical",
+      direction: PanelDirections.,
     },
   },
 };
@@ -58,7 +59,7 @@ export const Partial: Story = {
   args: {
     settings: {
       startOpen: true,
-      showButtons: ["increase_font_size", "change_colors"],
+      showButtons: [ButtonTypes.INCREASE_FONT_SIZE, ButtonTypes.CHANGE_COLORS],
     },
   },
 };

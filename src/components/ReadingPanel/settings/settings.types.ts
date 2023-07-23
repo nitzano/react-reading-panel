@@ -1,3 +1,5 @@
+import { ButtonTypes, PanelDirections } from "../../../constants";
+
 export interface ColorSettings {
   bgLightColor: string;
   fgLightColor: string;
@@ -14,16 +16,10 @@ export const defaultColorSettings: ColorSettings = {
 
 export type Theme = "light" | "dark";
 
-export type PanelDirection = "horizontal" | "vertical";
+export type PanelDirection =
+  (typeof PanelDirections)[keyof typeof PanelDirections];
 
-export type ButtonType =
-  | "change_colors"
-  | "decrease_font_size"
-  | "decrease_letter_spacing"
-  | "decrease_line_height"
-  | "increase_font_size"
-  | "increase_letter_spacing"
-  | "increase_line_height";
+export type ButtonType = (typeof ButtonTypes)[keyof typeof ButtonTypes];
 
 export interface Settings {
   colorSettings: ColorSettings;
@@ -53,14 +49,6 @@ export const defaultSettings: Settings = {
   lineHeightsStep: 1,
   lineHeightUnits: "px",
   startOpen: false,
-  direction: "horizontal",
-  showButtons: [
-    "increase_font_size",
-    "decrease_font_size",
-    "increase_line_height",
-    "decrease_line_height",
-    "change_colors",
-    "increase_letter_spacing",
-    "decrease_letter_spacing",
-  ],
+  direction: PanelDirections.HORIZONTAL,
+  showButtons: Object.values(ButtonTypes),
 };

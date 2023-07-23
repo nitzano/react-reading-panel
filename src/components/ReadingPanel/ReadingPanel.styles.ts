@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PanelDirection } from "./settings/settings.types";
+import { PanelDirections } from "../../constants";
 
 export const PanelButton = styled.button`
   height: 35px;
@@ -17,7 +18,7 @@ export const PanelButton = styled.button`
 export const Container = styled.div<{ direction?: PanelDirection }>`
   display: flex;
   flex-direction: ${(props) =>
-    props.direction === "vertical" ? "column" : "row"};
+    props.direction === PanelDirections.VERTICAL ? "column" : "row"};
   align-items: center;
   background: white;
   padding: 5px 2px;

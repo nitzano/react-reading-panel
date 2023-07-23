@@ -19,6 +19,7 @@ import { increaseLetterSpacing } from "./letter-spacing/increase-letter-spacing.
 import { decreaseLineHeight } from "./line-height/decrease-line-height.util";
 import { increaseLineHeight } from "./line-height/increase-line-height.util";
 import { Settings, defaultSettings } from "./settings/settings.types";
+import { ButtonTypes } from "../../constants";
 
 interface Props {
   targetClass?: string;
@@ -162,37 +163,37 @@ export function ReadingPanel({
 
       {isOpen && (
         <>
-          {showButtons.includes("increase_font_size") && (
+          {showButtons.includes(ButtonTypes.INCREASE_FONT_SIZE) && (
             <PanelButton onClick={handleFontIncrease}>
               <MdTextIncrease></MdTextIncrease>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_font_size") && (
+          {showButtons.includes(ButtonTypes.DECREASE_FONT_SIZE) && (
             <PanelButton onClick={handleFontDecrease}>
               <MdTextDecrease></MdTextDecrease>
             </PanelButton>
           )}
-          {showButtons.includes("increase_line_height") && (
+          {showButtons.includes(ButtonTypes.INCREASE_LINE_HEIGHT) && (
             <PanelButton onClick={handleLineHeightIncrease}>
               <AiOutlineMenu></AiOutlineMenu>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_line_height") && (
+          {showButtons.includes(ButtonTypes.DECREASE_LINE_HEIGHT) && (
             <PanelButton onClick={handleLineHeightDecrease}>
               <IoMenuOutline></IoMenuOutline>
             </PanelButton>
           )}
-          {showButtons.includes("change_colors") && (
+          {showButtons.includes(ButtonTypes.CHANGE_COLORS) && (
             <PanelButton onClick={handleColorChange}>
               <VscColorMode></VscColorMode>
             </PanelButton>
           )}
-          {showButtons.includes("increase_letter_spacing") && (
+          {showButtons.includes(ButtonTypes.INCREASE_LETTER_SPACING) && (
             <PanelButton>
               <FaExpandAlt onClick={handleLetterSpacingIncrease}></FaExpandAlt>
             </PanelButton>
           )}
-          {showButtons.includes("decrease_letter_spacing") && (
+          {showButtons.includes(ButtonTypes.DECREASE_LETTER_SPACING) && (
             <PanelButton onClick={handleLetterSpacingDecrease}>
               <ImShrink2></ImShrink2>
             </PanelButton>
