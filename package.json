@@ -58,7 +58,7 @@
     "@storybook/blocks": "^7.0.20",
     "@storybook/react": "^7.0.20",
     "@storybook/react-vite": "^7.0.20",
-    "@storybook/testing-library": "^0.1.0",
+    "@storybook/testing-library": "^0.2.2",
     "@types/lodash": "^4.14.195",
     "@types/prettier": "^2",
     "@types/react": "^18.0.37",
